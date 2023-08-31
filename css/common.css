@@ -26,20 +26,18 @@ body {
 }
 
 .sec .tit {
-    max-width: 1200px;
-    margin: 0 auto 50px auto;
+    margin: 0 0 30px 0;
     text-align: center;
 }
 
 .sec .tit h2 {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 700;
-    margin: 0 0 12px 0;
+    margin: 0 0 5px 0;
 }
 
 .sec .tit p {
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 15px;
 }
 
 .bg {
@@ -52,17 +50,7 @@ p {
 }
 
 .footer {
-    font-size: 12px;
-    color: #aaa;
-}
-
-.footer .st {
     font-size: 14px;
-    font-weight: 500;
-}
-
-.footer .copyright {
-    font-weight: 300;
 }
 
 .slick-track,
