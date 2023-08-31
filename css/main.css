@@ -556,6 +556,11 @@
         max-width: 330px;
         width: 100%;
     }
+
+    .main_br .arrows i:hover {
+    font-size: 24px;
+    opacity: 1;
+}
 }
 
 
