@@ -16,6 +16,10 @@
     padding: 0 100px;
 }
 
+.header h1 {
+    width: 134px;
+}
+
 .header h1 img {
     height: 55px;
     object-fit: cover;
@@ -27,9 +31,9 @@
     cursor: pointer;
 }
 
-
 .gnb:hover::before {
     top: 71px;
+    left: 0;
     height: 260px;
 }
 
@@ -118,7 +122,7 @@
     display: flex;
     gap: 30px;
     align-items: center;
-    width: 200px;
+    width: 134px;
 }
 
 @media (max-width: 768px) {
@@ -144,7 +148,7 @@
     }
 
     .header h1 {
-        padding: 13px 0 0 0;
+        padding: 10px 0 0 20px;
         z-index: 1000;
     }
 
@@ -279,7 +283,8 @@
 /* --main_vi-- */
 .main_vi .main_slide .itm {
     position: relative;
-    height: 750px;
+    height: 700px;
+    margin-top: 70px;
 }
 
 .main_vi .main_slide .itm01 {
@@ -332,20 +337,17 @@
     text-align: center;
 }
 
-.main_vi .slick-dots {
+.main_vi .dots {
     position: absolute;
-    top: 260px;
+    top: 310px;
     left: 50%;
-    transform: translate(-270px, 0);
+    transform: translate(-240px, 0);
+    z-index: 99;
 }
 
-.main_vi .slick-dots li {
+.main_vi .dots li {
     display: inline-block;
     margin: 0 5px;
-}
-
-.main_vi .slick-dots li button {
-    font-size: 0;
     width: 15px;
     height: 15px;
     border-radius: 3px;
@@ -355,17 +357,70 @@
     cursor: pointer;
 }
 
-.main_vi .slick-dots li.slick-active button {
-    background: #fff;
+.main_vi .dots li span {
+    font-size: 0;
+}
+
+.main_vi .dots li.on {
+    background: rgba(255, 255, 255, 1);
+}
+
+.main_vi .arrows {
+    position: absolute;
+    top: 310px;
+    left: 50%;
+    transform: translate(-270px, 0);
+    z-index: 99;
+    max-width: 140px;
+    width: 100%;
+    color: #ddd;
+}
+
+.main_vi .arrows>* {
+    position: absolute;
+    cursor: pointer;
+}
+
+.main_vi .arrows .left {
+    left: 0;
+}
+
+.main_vi .arrows .right {
+    right: 0;
 }
 
 @media (max-width: 768px) {
-    .main_vi .slick-dots {
-        position: absolute;
-        top: 206px;
-        left: 50%;
-        transform: translate(-205%, 0);
+
+    .main_vi .main_slide .itm {
+        height: calc(100vh - 70px);
     }
+
+    .main_vi .slogan strong {
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    .main_vi .slogan h2 {
+        font-size: 56px;
+    }
+    
+    .main_vi .slogan p {
+        font-size: 16px;
+    }
+    .main_vi .dots {
+        top: auto;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .main_vi .arrows {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 370px;
+    }
+    
 }
 
 
@@ -422,32 +477,37 @@
 
 .main_br .brand_slide .itm {
     position: relative;
-    height: 400px;
-    border-radius: 10px;
+    overflow: hidden;
+    height: 500px;
 }
 
-.main_br .brand_slide .itm01 {
+.main_br .brand_slide .itm01 .slide-image {
     background: url(../images/brand01.jpg) no-repeat center center/cover;
     background-blend-mode: multiply;
     background-color: #888;
 }
 
-.main_br .brand_slide .itm02 {
+.main_br .brand_slide .itm02 .slide-image {
     background: url(../images/brand02.jpg) no-repeat center center/cover;
     background-blend-mode: multiply;
     background-color: #777;
 }
 
-.main_br .brand_slide .itm03 {
+.main_br .brand_slide .itm03 .slide-image {
     background: url(../images/brand03.jpg) no-repeat center center/cover;
     background-blend-mode: multiply;
     background-color: #777;
 }
 
-.main_br .brand_slide .itm04 {
-    background: url(../images/brand04.jpg) no-repeat center center/cover;
+.main_br .brand_slide .itm04 .slide-image {
+    background: url(../images/brand04.jpg) no-repeat center/cover;
     background-blend-mode: multiply;
     background-color: #ccc;
+}
+
+.main_br .slide-image {
+    position: absolute;
+    inset: 0 0 0 0;
 }
 
 .main_br .txt_box {
@@ -457,6 +517,7 @@
     transform: translate(-50%, -90px);
     text-align: center;
     color: #fff;
+    z-index: 99;
 }
 
 .main_br .txt_box h3 {
@@ -470,46 +531,41 @@
     margin: 0 0 30px 0;
 }
 
-.main_br .btn {
-    padding: 10px 0;
-    color: #555;
-    background: #fff;
-    border-radius: 10px;
-    transition: 0.5s;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.main_br .btn:hover {
-    color: #fff;
-    background: #00a256;
-}
-
-.main_br .slick-dots {
+.main_br .dots {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translate(-50%, 0);
+    display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    z-index: 99;
 }
 
-.main_br .slick-dots li {
+.main_br .dots li {
     display: inline-block;
-    margin: 0 4px;
-}
-
-.main_br .slick-dots li button {
-    font-size: 0;
-    width: 60px;
-    height: 5px;
-    border-radius: 3px;
+    margin: 0 5px;
+    width: 40px;
+    height: 10px;
+    border-radius: 50px;
     background: rgba(255, 255, 255, 0.3);
     border: none;
     outline: none;
     cursor: pointer;
 }
 
-.main_br .slick-dots li.slick-active button {
-    background: #fff;
+.main_br .dots li span {
+    font-size: 0;
+}
+
+.main_br .dots li.on {
+    background: rgba(255, 255, 255, 1);
+}
+
+.main_br .arrows {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: 99;
 }
 
 .main_br .arrows {
@@ -534,34 +590,123 @@
     opacity: 1;
 }
 
+.main_br .arrows .left {
+    position: absolute;
+    left: 0;
+}
 .main_br .arrows .right {
     position: absolute;
     right: 0;
 }
 
-@media (max-width: 768px) {
-    .main_br .slick-dots li button {
-        width: 32px;
-        height: 8px;
-        border-radius: 50px;
-    }
+.main_br .btn a {
+    display: inline-block;
+    padding: 10px 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    transition: 0.5s;
+}
 
-    .main_br .arrows {
+.main_br .btn a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+    .main_br .brand_slide .itm {
+        position: relative;
+        overflow: hidden;
+        height: 500px;
+    }
+    
+    .main_br .brand_slide .itm01 .slide-image {
+        background: url(../images/brand01.jpg) no-repeat center center/cover;
+        background-blend-mode: multiply;
+        background-color: #888;
+    }
+    
+    .main_br .brand_slide .itm02 .slide-image {
+        background: url(../images/brand02.jpg) no-repeat center center/cover;
+        background-blend-mode: multiply;
+        background-color: #777;
+    }
+    
+    .main_br .brand_slide .itm03 .slide-image {
+        background: url(../images/brand03.jpg) no-repeat 83% center/cover;
+        background-blend-mode: multiply;
+        background-color: #777;
+    }
+    
+    .main_br .brand_slide .itm04 .slide-image {
+        background: url(../images/brand04.jpg) no-repeat 87% center/cover;
+        background-blend-mode: multiply;
+        background-color: #666;
+    }
+    
+    .main_br .slide-image {
         position: absolute;
-        top: auto;
-        bottom: 10px;
+        inset: 0 0 0 0;
+    }
+    
+    .main_br .txt_box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -90px);
+        text-align: center;
+        color: #fff;
+        z-index: 99;
+    }
+    
+    .main_br .txt_box h3 {
+        font-size: 50px;
+        font-weight: 700;
+        margin: 0 0 15px;
+    }
+    
+    .main_br .txt_box p {
+        font-size: 14px;
+        margin: 0 0 30px 0;
+    }
+    
+    .main_br .dots {
+        position: absolute;
+        bottom: 20px;
         left: 50%;
         transform: translate(-50%, 0);
-        font-size: 24px;
-        color: #fff;
-        max-width: 330px;
-        width: 100%;
+        z-index: 99;
     }
-
-    .main_br .arrows i:hover {
-    font-size: 24px;
-    opacity: 1;
-}
+    
+    .main_br .dots li {
+        display: inline-block;
+        margin: 0 5px;
+        width: 40px;
+        height: 10px;
+        border-radius: 50px;
+        background: rgba(255, 255, 255, 0.3);
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    
+    .main_br .dots li span {
+        font-size: 0;
+    }
+    
+    .main_br .dots li.on {
+        background: rgba(255, 255, 255, 1);
+    }
+    
+    .main_br .arrows {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 40px;
+        color: #fff;
+        max-width: 370px;
+        width: 100%;
+        z-index: 99;
+    }
 }
 
 

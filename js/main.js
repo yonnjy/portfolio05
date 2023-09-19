@@ -28,27 +28,69 @@ $(function () {
                 .stop()
                 .slideUp();
         }
-    })
+    });
 
-    $('.main_slide').slick({
-        arrows: false,
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        pauseOnHover: false,
-        pauseOnFocus: false,
+    const MainSlide = new Swiper('.main_slide', {
+        loop: true,
+        parallax: true,
+        effect: "fade",
+        speed: 1600,
+        pagination: "true",
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        on: {
+            slideChangeTransitionStart: function () {
+                $('.main_vi .dots li')
+                    .eq(this.realIndex)
+                    .addClass('on')
+                    .siblings()
+                    .removeClass('on')
+            }
+        }
+    });
+
+    $('.main_vi .dots li').on('click', function () {
+        const idx = $(this).index();
+        $(this).addClass('on').siblings().removeClass('on')
+        MainSlide.slideTo(idx);
+    });
+
+    $('.main_vi .arrows .left').on('click', function () {
+        MainSlide.slidePrev();
+    });
+    $('.main_vi .arrows .right').on('click', function () {
+        MainSlide.slideNext();
+    });
+
+    const BrandSlide = new Swiper('.brand_slide', {
+        loop: true,
+        parallax: true,
+        speed: 1000,
+        pagination: "true",
+        on: {
+            slideChangeTransitionStart: function () {
+                $('.main_br .dots li')
+                    .eq(this.realIndex)
+                    .addClass('on')
+                    .siblings()
+                    .removeClass('on')
+            }
+        }
+    });
+
+    $('.main_br .dots li').on('click', function () {
+        const bidx = $(this).index();
+        $(this).addClass('on').siblings().removeClass('on')
+        BrandSlide.slideTo(bidx);
     });
 
     $('.main_br .arrows .left').on('click', function () {
-        $('.brand_slide').slick('slickPrev');
+        BrandSlide.slidePrev();
     });
     $('.main_br .arrows .right').on('click', function () {
-        $('.brand_slide').slick('slickNext');
-    });
-
-    $('.brand_slide').slick({
-        arrows: false,
-        dots: true,
+        BrandSlide.slideNext();
     });
 
     $('.tab_list li').on('click', function (event) {

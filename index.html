@@ -9,7 +9,8 @@
     <meta name="Yeti" content="All" />
     <meta name="Yeti" content="index,follow" />
     <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
     <meta name="robots" content="index, follow">
     <meta name="title" content=" 정식품">
     <meta name="description" content="두유 및 음료 제조업체, 베지밀 두유, 베지밀 토들러, 그린비아, 간단요리사, 심천수, 음료류 등 제품 소개.">
@@ -22,11 +23,13 @@
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/slick.css">
+    <!-- <link rel="stylesheet" href="./css/slick.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/main.css?var=1.0">
 
     <script src="./js/jquery-1.12.4.min.js"></script>
-    <script src="./js/slick.min.js"></script>
+    <!-- <script src="./js/slick.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./js/main.js?var=1.0"></script>
 </head>
 
@@ -96,38 +99,53 @@
             <!-- main_visual -->
             <section class="main_vi">
                 <h2 class="blind">정식품 슬라이드</h2>
-                <div class="main_slide">
-                    <div class="itm itm01">
-                        <div class="slogan">
-                            <strong>Perfect nutrition balance</strong>
-                            <h2>완벽한 영양추구</h2>
-                            <p>
-                                두유 원액에 비타민과 무기질,<br />
-                                칼슘 등의 영양성분을 강화하여 보다 영양가 높은 두유를 제조합니다.
-                            </p>
+                <div class="swiper main_slide">
+                    <div class="swiper-wrapper">
+                        <div class="itm itm01 swiper-slide">
+                            <div class="slogan">
+                                <strong>Perfect nutrition balance</strong>
+                                <h2>완벽한 영양추구</h2>
+                                <p>
+                                    두유 원액에 비타민과 무기질,<br />
+                                    칼슘 등의 영양성분을 강화하여 보다 영양가 높은 두유를 제조합니다.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="itm itm02">
-                        <div class="slogan">
-                            <strong>Tasty and safe food</strong>
-                            <h2>엄선된 원료사용</h2>
-                            <p>
-                                철저히 엄선된 원료만을 사용합니다.<br />
-                                원료 3중 관리 시스템을 통해 안전성이 보증된 원료를 엄선하여 사용합니다.
-                            </p>
+                        <div class="itm itm02 swiper-slide">
+                            <div class="slogan">
+                                <strong>Tasty and safe food</strong>
+                                <h2>엄선된 원료사용</h2>
+                                <p>
+                                    철저히 엄선된 원료만을 사용합니다.<br />
+                                    원료 3중 관리 시스템을 통해 안전성이 보증된 원료를 엄선하여 사용합니다.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="itm itm03">
-                        <div class="slogan">
-                            <strong>High-quality equipment</strong>
-                            <h2>첨단 멸균시스템</h2>
-                            <p>
-                                균을 차단하는 테트라팩의 아셉틱<br />
-                                기술로 실온에서도 약 6~7개월 가량 오랫동안 보관이 가능합니다.
-                            </p>
+                        <div class="itm itm03 swiper-slide">
+                            <div class="slogan">
+                                <strong>High-quality equipment</strong>
+                                <h2>첨단 멸균시스템</h2>
+                                <p>
+                                    균을 차단하는 테트라팩의 아셉틱<br />
+                                    기술로 실온에서도 약 6~7개월 가량 오랫동안 보관이 가능합니다.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <ul class="arrows">
+                    <li class="left">
+                            <i class="xi-angle-left-thin left"></i>
+                        </li>
+                        <li class="right">
+                            <i class="xi-angle-right-thin right"></i>
+                        </li>
+                </ul>
+                <ul class="dots">
+                    <li class="on"><span>01</span></li>
+                    <li><span>02</span></li>
+                    <li><span>03</span></li>
+                </ul>
             </section>
             <!-- main_recommend -->
             <section class="main_re sec">
@@ -216,58 +234,72 @@
             </section>
             <!-- main_brand -->
             <section class="main_br">
-                <div class="inner">
-                    <div class="brand_slide">
-                        <div class="itm itm01">
-                            <div class="txt_box">
-                                <h3>베지밀</h3>
-                                <p>50여년 역사를 지닌 대한민국 정통두유 브랜드.<br />
-                                    콩의 맛과 영양을 그대로!
-                                </p>
-                                <div class="btn">
-                                    <a href="#!">VIEW MORE</a>
+                    <div class="swiper brand_slide">
+                        <div class="swiper-wrapper">
+                            <div class="itm itm01 swiper-slide">
+                                <div class="txt_box">
+                                    <h3>베지밀</h3>
+                                    <p>50여년 역사를 지닌 대한민국 정통두유 브랜드.<br />
+                                        콩의 맛과 영양을 그대로!
+                                    </p>
+                                    <div class="btn">
+                                        <a href="#!">VIEW MORE</a>
+                                    </div>
                                 </div>
+                                <div class="slide-image" data-swiper-parallax='45%'></div>
                             </div>
-                        </div>
-                        <div class="itm itm02">
-                            <div class="txt_box">
-                                <h3>그린비아</h3>
-                                <p>그린비아는 1991년 국내기술력으로 탄생한<br />
-                                    국내최초 경장영양식 선도 브랜드입니다.
-                                </p>
-                                <div class="btn">
-                                    <a href="#!">VIEW MORE</a>
+                            <div class="itm itm02 swiper-slide">
+                                <div class="txt_box">
+                                    <h3>그린비아</h3>
+                                    <p>그린비아는 1991년 국내기술력으로 탄생한<br />
+                                        국내최초 경장영양식 선도 브랜드입니다.
+                                    </p>
+                                    <div class="btn">
+                                        <a href="#!">VIEW MORE</a>
+                                    </div>
                                 </div>
+                                <div class="slide-image" data-swiper-parallax='45%'></div>
                             </div>
-                        </div>
-                        <div class="itm itm03">
-                            <div class="txt_box">
-                                <h3>간단요리사</h3>
-                                <p>주방의 든든한 지원군!<br />
-                                    간단요리사는 밋밋한 요리에 깊은 맛을 더해줍니다.
-                                </p>
-                                <div class="btn">
-                                    <a href="#!">VIEW MORE</a>
+                            <div class="itm itm03 swiper-slide">
+                                <div class="txt_box">
+                                    <h3>간단요리사</h3>
+                                    <p>주방의 든든한 지원군!<br />
+                                        간단요리사는 밋밋한 요리에 깊은 맛을 더해줍니다.
+                                    </p>
+                                    <div class="btn">
+                                        <a href="#!">VIEW MORE</a>
+                                    </div>
                                 </div>
+                                <div class="slide-image" data-swiper-parallax='45%'></div>
                             </div>
-                        </div>
-                        <div class="itm itm04">
-                            <div class="txt_box">
-                                <h3>심천수</h3>
-                                <p>지리산에서 만들어진 자연 그대로의 깨끗함.<br />
-                                    부드럽게 마시는 맛있는 물!
-                                </p>
-                                <div class="btn">
-                                    <a href="#!">VIEW MORE</a>
+                            <div class="itm itm04 swiper-slide">
+                                <div class="txt_box">
+                                    <h3>심천수</h3>
+                                    <p>지리산에서 만들어진 자연 그대로의 깨끗함.<br />
+                                        부드럽게 마시는 맛있는 물!
+                                    </p>
+                                    <div class="btn">
+                                        <a href="#!">VIEW MORE</a>
+                                    </div>
                                 </div>
+                                <div class="slide-image" data-swiper-parallax='45%'></div>
                             </div>
                         </div>
                     </div>
-                    <div class="arrows">
-                        <i class="xi-angle-left-thin left"></i>
-                        <i class="xi-angle-right-thin right"></i>
-                    </div>
-                </div>
+                    <ul class="arrows">
+                        <li class="left">
+                            <i class="xi-angle-left-thin left"></i>
+                        </li>
+                        <li class="right">
+                            <i class="xi-angle-right-thin right"></i>
+                        </li>
+                    </ul>
+                    <ul class="dots">
+                        <li class="on"><span>01</span></li>
+                        <li><span>02</span></li>
+                        <li><span>03</span></li>
+                        <li><span>04</span></li>
+                    </ul>
             </section>
             <!-- main_product -->
             <section class="main_pro sec _ani_">
